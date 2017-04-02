@@ -1,0 +1,27 @@
+body{
+    background-image: url('http://www.amazingwallpaperz.com/wp-content/uploads/Landscape-1920x1080-Wallpaper-Fullscreen.jpg'); 
+    height:100%;
+    width:100%;
+    text-align: center;
+}
+.debug-border{
+    border-color: white;
+    border-width:1px;
+    border-style:solid;
+}
+.center-element{
+    /*display:inline-block;*/
+    margin:400px 400px 20px 400px ;
+    background-color:rgba(255,255,255,0.3);
+    border-radius: 5px;
+}
+.button-container{
+    margin:0px 400px 0px 400px;
+}
+.quote{ 
+    font-size:40px;
+    text-align:center;
+  word-wrap: break-word;
+    
+
+}

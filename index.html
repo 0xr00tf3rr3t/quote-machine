@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="MainStylesheet.css">
+    <title>Random Quote</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+      
+        <!-- Quote location -->
+        <div class="debug-border center-element">
+            <div class="quote"> </div>
+
+        </div>
+        <!--_______________________-->
+
+
+        <!-- New Quote Button -->        
+        <div class="button-container debug-border ">
+            <button id="getQuote" class="btn btn-primary btn-lg" >Random Quote</button>
+        </div>
+        <!--_______________________-->
+
+        <!-- Share Quote Buttons -->
+        <div>
+
+        </div>
+    </div>
+  <script>
+            $(document).ready(function() {
+	$("#getQuote").on("click", function() {
+		$.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?", function(json) {
+			console.log(json);
+			$(".quote").html(JSON.stringify(json));
+		})
+	})
+});          
+        </script>
+</body>
+
+</html>
