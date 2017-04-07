@@ -2,6 +2,7 @@ body{
     background-image: url('http://www.amazingwallpaperz.com/wp-content/uploads/Landscape-1920x1080-Wallpaper-Fullscreen.jpg'); 
     height:100%;
     width:100%;
+    background-repeat:no-repeat;
     text-align: center;
 }
 .debug-border{
@@ -10,14 +11,16 @@ body{
     border-style:solid;
 }
 .center-element{
-    /*display:inline-block;*/
+    display:inline-block;
     margin:200px 400px 20px 400px ;
     padding:30px 40px;
     background-color:rgba(0,0,0,0.6);
     border-radius: 5px;
+    min-width:300px;
 }
 .button-container{
     margin:0px 400px 0px 400px;
+        min-width:300px;
 }
 .quote{ 
     font-size:40px;
@@ -30,11 +33,14 @@ body{
 #quote{
     color:white;
     font-size:50px;
-
+    font-style:italic;
+    font-family: 'Amatic SC', cursive;
 }
 #author{
     color:white;
-    font-size:30px;
+    font-size:20px;
+       font-family:cursive;
+      
 }
 .twitterLogo{
     color:#0084b4;

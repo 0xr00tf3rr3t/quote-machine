@@ -14,9 +14,15 @@ $(document).ready(function () {
                         }
                         $("#quote").html(quote);
                         $("#author").html(author);
-                        
-                        $('#tweetQuote').attr('href', 'https://twitter.com/intent/tweet?text=' + quote.slice(0,139)).attr('target', '_blank');
-                });
+                        console.log(quote.length);
+                        if (quote.length >=140)
+                                {
+                                        $('#tweetQuote').attr('href', 'https://twitter.com/intent/tweet?text=' + quote.slice(0,135)+"...").attr('target', '_blank');
+                                }
+                      else {
+                                $('#tweetQuote').attr('href', 'https://twitter.com/intent/tweet?text=' + quote).attr('target', '_blank');
+                      }          
+     });
         }
 
 });
