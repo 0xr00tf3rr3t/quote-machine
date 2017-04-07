@@ -5,6 +5,8 @@ $(document).ready(function () {
 
         $("#getQuote").on("click", function(){ getQuote() ;});
         function getQuote() {
+                $("#quote").html('<i class="fa fa-refresh fa-spin" style="font-size:50px">');
+                $("#author").html('');
                 $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?", function (json) {
                         var quote = json.quoteText;
                         var author = json.quoteAuthor;
